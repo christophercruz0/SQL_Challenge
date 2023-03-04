@@ -47,20 +47,20 @@ CREATE TABLE "salaries" (
 );
 
 ALTER TABLE "employees" ADD CONSTRAINT "fk_Employees_empl_title_id" FOREIGN KEY("empl_title_id")
-REFERENCES "Titles" ("title_id");
+REFERENCES "titles" ("title_id");
 
 ALTER TABLE "dept_Mgr" ADD CONSTRAINT "fk_Dept_Mgr_dept_no" FOREIGN KEY("dept_no")
-REFERENCES "Departments" ("dept_no");
+REFERENCES "departments" ("dept_no");
 
 ALTER TABLE "dept_Mgr" ADD CONSTRAINT "fk_Dept_Mgr_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "Employees" ("Emp_no");
+REFERENCES "employees" ("Emp_no");
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_Dept_emp_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "Employees" ("Emp_no");
+REFERENCES "employees" ("Emp_no");
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_Dept_emp_dept_no" FOREIGN KEY("dept_no")
-REFERENCES "Departments" ("dept_no");
+REFERENCES "departments" ("dept_no");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_Salaries_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "Employees" ("Emp_no");
+REFERENCES "employees" ("Emp_no");
 
